@@ -41,6 +41,7 @@ if statusLoading :
 
 			else: 
 				print('Input Menu Choice Corectly')
+				input('ENTER to Exit')
 
 	else:
 		print('Failed to login.')
