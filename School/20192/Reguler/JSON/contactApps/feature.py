@@ -40,11 +40,8 @@ def login():
 	if Username in user:
 		dataCheck = True
 		passLogin = (user[Username] == Password)
-	else:
-		dataCheck = False
-		passLogin = False
 
-	while not dataCheck and not passLogin:
+	while (not dataCheck) or (not passLogin):
 		counter += 1
 		if counter > 3:
 			return False
@@ -54,9 +51,6 @@ def login():
 		if Username in user:
 			dataCheck = True
 			passLogin = (user[Username] == Password)
-		else:
-			dataCheck = False
-			passLogin = False
 	else:
 		print('Login Pass')
 		return True
